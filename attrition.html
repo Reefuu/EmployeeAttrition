@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Employee Attrition</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Predict the Employee chan
+                    <br>
+                </h5>
+            </div>
+
+            <div class="row">
+                <form action='/predict' method="post" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <label for="age"><b>Age</b></label>
+                            <br>
+                            <input placeholder="Enter Age" name="Age" id="age" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="business_travel"><b>Business Travel</b></label>
+                            <br>
+                            <input placeholder="Enter Business Travel" name="BusinessTravel" id="business_travel"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="daily_rate"><b>Daily Rate</b></label>
+                            <br>
+                            <input placeholder="Enter Daily Rate" name="DailyRate" id="daily_rate" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="department"><b>Department</b></label>
+                            <br>
+                            <input placeholder="Enter Department" name="Department" id="department" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="distance_from_home"><b>Distance From Home</b></label>
+                            <br>
+                            <input placeholder="Enter Distance From Home" name="DistanceFromHome"
+                                id="distance_from_home" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="education"><b>Education</b></label>
+                            <br>
+                            <input placeholder="Enter Education" name="Education" id="education" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="education_field"><b>Education Field</b></label>
+                            <br>
+                            <input placeholder="Enter Education Field" name="EducationField" id="education_field"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="environment_satisfaction"><b>Environment Satisfaction</b></label>
+                            <br>
+                            <input placeholder="Enter Environment Satisfaction" name="EnvironmentSatisfaction"
+                                id="environment_satisfaction" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="gender"><b>Gender</b></label>
+                            <br>
+                            <input placeholder="Enter Gender" name="Gender" id="gender" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="hourly_rate"><b>Hourly Rate</b></label>
+                            <br>
+                            <input placeholder="Enter Hourly Rate" name="HourlyRate" id="hourly_rate" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="job_involvement"><b>Job Involvement</b></label>
+                            <br>
+                            <input placeholder="Enter Job Involvement" name="JobInvolvement" id="job_involvement"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="job_level"><b>Job Level</b></label>
+                            <br>
+                            <input placeholder="Enter Job Level" name="JobLevel" id="job_level" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="job_role"><b>Job Role</b></label>
+                            <br>
+                            <input placeholder="Enter Job Role" name="JobRole" id="job_role" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="job_satisfaction"><b>Job Satisfaction</b></label>
+                            <br>
+                            <input placeholder="Enter Job Satisfaction" name="JobSatisfaction" id="job_satisfaction"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="marital_status"><b>Marital Status</b></label>
+                            <br>
+                            <input placeholder="Enter Marital Status" name="MaritalStatus" id="marital_status"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="monthly_income"><b>Monthly Income</b></label>
+                            <br>
+                            <input placeholder="Enter Monthly Income" name="MonthlyIncome" id="monthly_income"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="monthly_rate"><b>Monthly Rate</b></label>
+                            <br>
+                            <input placeholder="Enter Monthly Rate" name="MonthlyRate" id="monthly_rate" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="num_companies_worked"><b>Num Companies Worked</b></label>
+                            <br>
+                            <input placeholder="Enter Num Companies Worked" name="NumCompaniesWorked"
+                                id="num_companies_worked" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="over_time"><b>Over Time</b></label>
+                            <br>
+                            <input placeholder="Enter Over Time" name="OverTime" id="over_time" type="text"
+                                class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="percent_salary_hike"><b>Percent Salary Hike</b></label>
+                            <br>
+                            <input placeholder="Enter Percent Salary Hike" name="PercentSalaryHike"
+                                id="percent_salary_hike" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="performance_rating"><b>Performance Rating</b></label>
+                            <br>
+                            <input placeholder="Enter Performance Rating" name="PerformanceRating"
+                                id="performance_rating" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="relationship_satisfaction"><b>Relationship Satisfaction</b></label>
+                            <br>
+                            <input placeholder="Enter Relationship Satisfaction" name="RelationshipSatisfaction"
+                                id="relationship_satisfaction" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="stock_option_level"><b>Stock Option Level</b></label>
+                            <br>
+                            <input placeholder="Enter Stock Option Level" name="StockOptionLevel"
+                                id="stock_option_level" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="total_working_years"><b>Total Working Years</b></label>
+                            <br>
+                            <input placeholder="Enter Total Working Years" name="TotalWorkingYears"
+                                id="total_working_years" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="training_times_last_year"><b>Training Times Last Year</b></label>
+                            <br>
+                            <input placeholder="Enter Training Times Last Year" name="TrainingTimesLastYear"
+                                id="training_times_last_year" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="work_life_balance"><b>Work Life Balance</b></label>
+                            <br>
+                            <input placeholder="Enter Work Life Balance" name="WorkLifeBalance" id="work_life_balance"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="years_at_company"><b>Years At Company</b></label>
+                            <br>
+                            <input placeholder="Enter Years At Company" name="YearsAtCompany" id="years_at_company"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="years_in_current_role"><b>Years In Current Role</b></label>
+                            <br>
+                            <input placeholder="Enter Years In Current Role" name="YearsInCurrentRole"
+                                id="years_in_current_role" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="years_since_last_promotion"><b>Years Since Last Promotion</b></label>
+                            <br>
+                            <input placeholder="Enter Years Since Last Promotion" name="YearsSinceLastPromotion"
+                                id="years_since_last_promotion" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <label for="years_with_curr_manager"><b>Years With Current Manager</b></label>
+                            <br>
+                            <input placeholder="Enter Years With Current Manager" name="YearsWithCurrManager"
+                                id="years_with_curr_manager" type="text" class="validate">
+                        </div>
+
+
+                    </div>
+
+                    <div class="row center">
+
+                        <button type="submit" class="btn-large waves-effect waves-light orange">Predict
+                            Probability</button>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            {{pred}}<br>
+
+        </div>
+    </div>
+
+
+    <br><br>
+    </div>
+    </div>>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src=".js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+
+</html>
