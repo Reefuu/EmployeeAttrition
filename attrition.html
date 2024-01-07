@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Starter Template - Materialize</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<style>
+    select{
+        color:grey
+    }
+</style>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+              
+            <h1 class="header center orange-text">Employee Attrition</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Predict the Employee chan
+                     
+                </h5>
+            </div>
+
+            <div class="row">
+                <form action='/predict' method="post" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="age"><b>Age</b></label>
+                            </div>
+
+                            <input placeholder="Enter Age" name="age" id="age"
+                                type="text" class="validate">
+                            
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="monthly_income"><b>Monthly Income</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Monthly Income in $" name="MonthlyIncome" id="monthly_income"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="num_companies_worked"><b>Num Companies Worked</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Num Companies Worked" name="NumCompaniesWorked"
+                                id="num_companies_worked" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="percent_salary_hike"><b>Percent Salary Hike</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Percent Salary Hike (%)" name="PercentSalaryHike"
+                                id="percent_salary_hike" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="total_working_years"><b>Total Working Years</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Total Working Years" name="TotalWorkingYears"
+                                id="total_working_years" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="years_at_company"><b>Years At Company</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Years At Company" name="YearsAtCompany" id="years_at_company"
+                                type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="years_in_current_role"><b>Years In Current Role</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Years In Current Role" name="YearsInCurrentRole"
+                                id="years_in_current_role" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="years_since_last_promotion"><b>Years Since Last Promotion</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Years Since Last Promotion" name="YearsSinceLastPromotion"
+                                id="years_since_last_promotion" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="years_with_curr_manager"><b>Years With Current Manager</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Years With Current Manager" name="YearsWithCurrManager"
+                                id="years_with_curr_manager" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="business_travel"><b>Business Travel</b></label>
+                            </div>
+
+                            <select class="browser-default" id="business_travel">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Non-Travel</option>
+                                <option value="2">Travel Rarely</option>
+                                <option value="3">Travel Frequently</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="department"><b>Department</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="department">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Sales</option>
+                                <option value="2">Research & Development</option>
+                                <option value="3">Human Resources</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="distance_from_home"><b>Distance From Home</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="distance_from_home">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Near</option>
+                                <option value="2">Far</option>
+                                <option value="3">Very Far</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="education"><b>Education</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="education">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Below College</option>
+                                <option value="2">College</option>
+                                <option value="3">Bachelor</option>
+                                <option value="4">Master</option>
+                                <option value="5">Doctor</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="environment_satisfaction"><b>Environment Satisfaction</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="environment_satisfaction">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="gender"><b>Gender</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="gender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>                        
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="job_involvement"><b>Job Involvement</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="job_involvement">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="job_level"><b>Job Level</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="job_level">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Normal</option>
+                                <option value="3">Medium</option>
+                                <option value="4">High</option>
+                                <option value="5">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="job_satisfaction"><b>Job Satisfaction</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="job_satisfaction">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="marital_status"><b>Marital Status</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="marital_status">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                                <option value="3">Divorced</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="over_time"><b>Over Time</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="over_time">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="relationship_satisfaction"><b>Relationship Satisfaction</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="relationship_satisfaction">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="work_life_balance"><b>Work Life Balance</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="work_life_balance">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Bad</option>
+                                <option value="2">Good</option>
+                                <option value="3">Better</option>
+                                <option value="4">Best</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row center">
+
+                        <button type="submit" class="btn-large waves-effect waves-light orange">Predict
+                            Probability</button>
+                    </div>
+                </form>
+            </div>
+
+            <br>
+            {{pred}}<br>
+
+        </div>
+    </div>
+
+
+      
+    </div>
+    </div>
+
+     Scripts
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src=".js/materialize.js"></script>
+    <script src="js/init.js"></script>
+</body>
+
+</html>
