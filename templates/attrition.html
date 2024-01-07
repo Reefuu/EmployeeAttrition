@@ -8,18 +8,26 @@
 
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 </head>
 
+<style>
+    select{
+        color:grey
+    }
+</style>
+
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
-            <br><br>
+              
             <h1 class="header center orange-text">Employee Attrition</h1>
             <div class="row center">
-                <h5 class="header col s12 light">Predict the Employee chances of Attrition
-                    <br>
+                <h5 class="header col s12 light">Predict the Employee chan
+                     
                 </h5>
             </div>
 
@@ -27,211 +35,260 @@
                 <form action='/predict' method="post" class="col s12">
                     <div class="row">
                         <div class="input-field col s4">
-                            <label for="age"><b>Age</b></label>
-                            <br>
-                            <input placeholder="Enter Age" name="Age" id="age" type="text" class="validate">
-                        </div>
+                            <div>
+                                <label for="age"><b>Age</b></label>
+                            </div>
 
-                        <div class="input-field col s4">
-                            <label for="business_travel"><b>Business Travel</b></label>
-                            <br>
-                            <input placeholder="Enter Business Travel" name="BusinessTravel" id="business_travel"
+                            <input placeholder="Enter Age" name="age" id="age"
                                 type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="daily_rate"><b>Daily Rate</b></label>
-                            <br>
-                            <input placeholder="Enter Daily Rate" name="DailyRate" id="daily_rate" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="department"><b>Department</b></label>
-                            <br>
-                            <input placeholder="Enter Department" name="Department" id="department" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="distance_from_home"><b>Distance From Home</b></label>
-                            <br>
-                            <input placeholder="Enter Distance From Home" name="DistanceFromHome"
-                                id="distance_from_home" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="education"><b>Education</b></label>
-                            <br>
-                            <input placeholder="Enter Education" name="Education" id="education" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="education_field"><b>Education Field</b></label>
-                            <br>
-                            <input placeholder="Enter Education Field" name="EducationField" id="education_field"
+                            <div>
+                                <label for="monthly_income"><b>Monthly Income</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Monthly Income in $" name="MonthlyIncome" id="monthly_income"
                                 type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="environment_satisfaction"><b>Environment Satisfaction</b></label>
-                            <br>
-                            <input placeholder="Enter Environment Satisfaction" name="EnvironmentSatisfaction"
-                                id="environment_satisfaction" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="gender"><b>Gender</b></label>
-                            <br>
-                            <input placeholder="Enter Gender" name="Gender" id="gender" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="hourly_rate"><b>Hourly Rate</b></label>
-                            <br>
-                            <input placeholder="Enter Hourly Rate" name="HourlyRate" id="hourly_rate" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="job_involvement"><b>Job Involvement</b></label>
-                            <br>
-                            <input placeholder="Enter Job Involvement" name="JobInvolvement" id="job_involvement"
-                                type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="job_level"><b>Job Level</b></label>
-                            <br>
-                            <input placeholder="Enter Job Level" name="JobLevel" id="job_level" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="job_role"><b>Job Role</b></label>
-                            <br>
-                            <input placeholder="Enter Job Role" name="JobRole" id="job_role" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="job_satisfaction"><b>Job Satisfaction</b></label>
-                            <br>
-                            <input placeholder="Enter Job Satisfaction" name="JobSatisfaction" id="job_satisfaction"
-                                type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="marital_status"><b>Marital Status</b></label>
-                            <br>
-                            <input placeholder="Enter Marital Status" name="MaritalStatus" id="marital_status"
-                                type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="monthly_income"><b>Monthly Income</b></label>
-                            <br>
-                            <input placeholder="Enter Monthly Income" name="MonthlyIncome" id="monthly_income"
-                                type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="monthly_rate"><b>Monthly Rate</b></label>
-                            <br>
-                            <input placeholder="Enter Monthly Rate" name="MonthlyRate" id="monthly_rate" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="num_companies_worked"><b>Num Companies Worked</b></label>
-                            <br>
+                            <div>
+                                <label for="num_companies_worked"><b>Num Companies Worked</b></label>
+                            </div>
+                             
                             <input placeholder="Enter Num Companies Worked" name="NumCompaniesWorked"
                                 id="num_companies_worked" type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="over_time"><b>Over Time</b></label>
-                            <br>
-                            <input placeholder="Enter Over Time" name="OverTime" id="over_time" type="text"
-                                class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="percent_salary_hike"><b>Percent Salary Hike</b></label>
-                            <br>
-                            <input placeholder="Enter Percent Salary Hike" name="PercentSalaryHike"
+                            <div>
+                                <label for="percent_salary_hike"><b>Percent Salary Hike</b></label>
+                            </div>
+                             
+                            <input placeholder="Enter Percent Salary Hike (%)" name="PercentSalaryHike"
                                 id="percent_salary_hike" type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="performance_rating"><b>Performance Rating</b></label>
-                            <br>
-                            <input placeholder="Enter Performance Rating" name="PerformanceRating"
-                                id="performance_rating" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="relationship_satisfaction"><b>Relationship Satisfaction</b></label>
-                            <br>
-                            <input placeholder="Enter Relationship Satisfaction" name="RelationshipSatisfaction"
-                                id="relationship_satisfaction" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="stock_option_level"><b>Stock Option Level</b></label>
-                            <br>
-                            <input placeholder="Enter Stock Option Level" name="StockOptionLevel"
-                                id="stock_option_level" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="total_working_years"><b>Total Working Years</b></label>
-                            <br>
+                            <div>
+                                <label for="total_working_years"><b>Total Working Years</b></label>
+                            </div>
+                             
                             <input placeholder="Enter Total Working Years" name="TotalWorkingYears"
                                 id="total_working_years" type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="training_times_last_year"><b>Training Times Last Year</b></label>
-                            <br>
-                            <input placeholder="Enter Training Times Last Year" name="TrainingTimesLastYear"
-                                id="training_times_last_year" type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="work_life_balance"><b>Work Life Balance</b></label>
-                            <br>
-                            <input placeholder="Enter Work Life Balance" name="WorkLifeBalance" id="work_life_balance"
-                                type="text" class="validate">
-                        </div>
-
-                        <div class="input-field col s4">
-                            <label for="years_at_company"><b>Years At Company</b></label>
-                            <br>
+                            <div>
+                                <label for="years_at_company"><b>Years At Company</b></label>
+                            </div>
+                             
                             <input placeholder="Enter Years At Company" name="YearsAtCompany" id="years_at_company"
                                 type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="years_in_current_role"><b>Years In Current Role</b></label>
-                            <br>
+                            <div>
+                                <label for="years_in_current_role"><b>Years In Current Role</b></label>
+                            </div>
+                             
                             <input placeholder="Enter Years In Current Role" name="YearsInCurrentRole"
                                 id="years_in_current_role" type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="years_since_last_promotion"><b>Years Since Last Promotion</b></label>
-                            <br>
+                            <div>
+                                <label for="years_since_last_promotion"><b>Years Since Last Promotion</b></label>
+                            </div>
+                             
                             <input placeholder="Enter Years Since Last Promotion" name="YearsSinceLastPromotion"
                                 id="years_since_last_promotion" type="text" class="validate">
                         </div>
 
                         <div class="input-field col s4">
-                            <label for="years_with_curr_manager"><b>Years With Current Manager</b></label>
-                            <br>
+                            <div>
+                                <label for="years_with_curr_manager"><b>Years With Current Manager</b></label>
+                            </div>
+                             
                             <input placeholder="Enter Years With Current Manager" name="YearsWithCurrManager"
                                 id="years_with_curr_manager" type="text" class="validate">
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="business_travel"><b>Business Travel</b></label>
+                            </div>
+
+                            <select class="browser-default" id="business_travel" name="BusinessTravel">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Non-Travel</option>
+                                <option value="2">Travel Rarely</option>
+                                <option value="3">Travel Frequently</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="department"><b>Department</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="department" name="Department">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Sales</option>
+                                <option value="2">Research & Development</option>
+                                <option value="3">Human Resources</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="distance_from_home"><b>Distance From Home</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="distance_from_home" name="DistanceFromHome">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Near</option>
+                                <option value="2">Far</option>
+                                <option value="3">Very Far</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="education"><b>Education</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="education" name="Education">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Below College</option>
+                                <option value="2">College</option>
+                                <option value="3">Bachelor</option>
+                                <option value="4">Master</option>
+                                <option value="5">Doctor</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="environment_satisfaction"><b>Environment Satisfaction</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="environment_satisfaction" name="EnvironmentSatisfaction">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="gender"><b>Gender</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="gender" name="Gender">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                            </select>                        
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="job_involvement"><b>Job Involvement</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="job_involvement" name="JobInvolvement">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="job_level"><b>Job Level</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="job_level" name="JovLevel">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Normal</option>
+                                <option value="3">Medium</option>
+                                <option value="4">High</option>
+                                <option value="5">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="job_satisfaction"><b>Job Satisfaction</b></label>
+                            </div>
+                            
+                            <select class="browser-default" id="job_satisfaction" name="JobSatisfaction">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="marital_status"><b>Marital Status</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="marital_status" name="MaritalStatus">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Single</option>
+                                <option value="2">Married</option>
+                                <option value="3">Divorced</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="over_time"><b>Over Time</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="over_time" name="OverTime">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Yes</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="relationship_satisfaction"><b>Relationship Satisfaction</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="relationship_satisfaction" name="RelationshipSatisfaction">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Low</option>
+                                <option value="2">Medium</option>
+                                <option value="3">High</option>
+                                <option value="4">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field col s4">
+                            <div>
+                                <label for="work_life_balance"><b>Work Life Balance</b></label>
+                            </div>
+                             
+                            <select class="browser-default" id="work_life_balance" name="WorkLifeBalance">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Bad</option>
+                                <option value="2">Good</option>
+                                <option value="3">Better</option>
+                                <option value="4">Best</option>
+                            </select>
                         </div>
 
 
@@ -252,15 +309,14 @@
     </div>
 
 
-    <br><br>
+      
     </div>
-    </div>>
+    </div>
 
-    <!--  Scripts-->
+     Scripts
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src=".js/materialize.js"></script>
     <script src="js/init.js"></script>
-
 </body>
 
 </html>
